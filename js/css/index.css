@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1{
+    color:blue;
+    font-size: 40pt;
+    font-weight: bold;
+}
+#container{
+    background: rgb(100%,100%,100%);
+    width: 640px;
+    border-radius: 7px;
+    box-shadow:1px 1px 1px rgba(0%,0%,0%,0.3);
+    margin:20px auto 20px auto;
+    padding:15px;
+}
+.txt-box{
+        background: rgb(95%,95%,90%);
+        border:3px doouble rgb(60%,60%,60%);
+        border-radius: 5px;
+        padding: 10px 15px 10px 15px;
+        margin:15px 0 0 0;
+        line-height:150%;
+}
+h2{
+    border-bottom: 1px solid rgb(10%,30%,30%);
+}
