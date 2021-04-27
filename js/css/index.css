@@ -2,11 +2,36 @@
     margin:0;
     padding:0;
 }
-h1{
-    color:blue;
-    font-size: 40pt;
-    font-weight: bold;
+h1 {
+    color: #6cb4e4;
+    text-align: center;
+    padding: 0.25em;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+h2{
+    text-align: center;
+    /* border-bottom: 1px solid rgb(10%,30%,30%); */
 }
+
+ul {
+    padding: 0;
+  }
+  
+li {
+    color: #404040;
+    border-left: solid 6px blue;/*左側の線*/
+    border-bottom: solid 2px #dadada;/*下に灰色線*/
+    background: whitesmoke;
+    margin-bottom: 5px;/*下のバーとの余白*/
+    line-height: 1.5;
+    padding: 0.5em;
+    list-style-type: none!important;/*ポチ消す*/
+    font-weight: bold;
+  }
 #container{
     background: rgb(100%,100%,100%);
     width: 640px;
@@ -14,15 +39,23 @@ h1{
     box-shadow:1px 1px 1px rgba(0%,0%,0%,0.3);
     margin:20px auto 20px auto;
     padding:15px;
-}
+} 
+
 .txt-box{
-        background: rgb(95%,95%,90%);
-        border:3px doouble rgb(60%,60%,60%);
-        border-radius: 5px;
-        padding: 10px 15px 10px 15px;
-        margin:15px 0 0 0;
-        line-height:150%;
+    margin: 2em 0;
+    background: #dcefff;
 }
-h2{
-    border-bottom: 1px solid rgb(10%,30%,30%);
+.txt-title {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.txt-box p {
+    padding: 15px 20px;
+    margin: 0;
+    font-weight: bold;
 }
