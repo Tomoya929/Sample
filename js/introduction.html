@@ -11,24 +11,41 @@
 <body id="body">
     <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
     <script>bubbly();</script>
+    <script type = "text/javascript">
+      function showPopup(event) {
+      target = document.getElementById("popup");
 
+      if (!event) var event = window.event;
+      if (!event.pageX) px = event.clientX + document.body.scrollLeft; else px = event.pageX;
+      if (!event.pageY) py = event.clientY + document.body.scrollTop; else py = event.pageY;
+
+        target.style.left = px+10 + "px";
+        target.style.top = py+5 + "px";
+        target.style.visibility = "visible";
+    }
+    function hidePopup() {
+      target = document.getElementById("popup");
+      target.style.visibility = "hidden";
+     }
+    </script>
     <div id="container">
         <h1><i>-My Profile-</i></h1>
 
     <div class = "txt-box">
-     <div class= "txt-title">Base Data</div>
+     <div class= "txt-title">    
+        Base Data</div>
          <ul>
              <li>名前　星 智也</li>
              <li>生年月日　1997/9/29(てんびん座)</li>
              <li>血液型 B型</li>
          </ul>
     </div>
-
+  
     <div class = "txt-box">
         <div class= "txt-title">略歴</div>
          <ul>
-             <li>2016年3月 埼玉県立所沢高等学校卒業</li>
-             <li>2021年3月 成城大学社会イノベーション学部卒業</li>
+             <li>2016年3月 埼玉県立所沢高等学校 卒業</li>
+             <li>2021年3月 成城大学社会イノベーション学部 卒業</li>
          </ul>
     </div>
 
@@ -43,18 +60,26 @@
     <div class = "txt-box">
         <div class= "txt-title">趣味</div>
          <ul>
-             <li>アニメ鑑賞(最近はウマ娘にハマっています)</li>
+             <li><a href="javascript:void(0);" 
+                onmouseover= showPopup(event);
+                onmouseout= hidePopup();>
+                 アニメ鑑賞</a></li>
+                 <div id = "popup" 
+                 style = position:absolute;z-index:10;visibility:hidden;background-color:lightblue;font-weight:bold;>
+                     最近はウマ娘にハマっています。</div>
              <li>ライブ鑑賞</li>
              <li>旅行</li>
-         </ul>
+             <div class = "picture">
+            
+        </div>
     </div>
 
-    <div class = "txt-box">
-        <div class= "txt-title">自己PR</div>
-         <p>物事に対して粘り強く取り組める点が私の強みです。</p>
+    <div class = "PR">
+        <span class= "PR-title">自己PR</span>
+         <p><u>何事も粘り強く取り組める点が私の強みです。</u></p>
          <p>IT経験はまだありませんが、積極的に挑戦する気持ちを忘れずに</p>
          <p>今後の業務に取り組んでいきたいです。</p>
-    </div>
+        </span></div>
    
 </body>
 </html>

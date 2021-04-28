@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+  <script language="javascript" type="text/javascript">
+    function showPopup(event) {
+      target = document.getElementById("popup");
+
+      if (!event) var event = window.event;
+      if (!event.pageX) px = event.clientX + document.body.scrollLeft; else px = event.pageX;
+      if (!event.pageY) py = event.clientY + document.body.scrollTop; else py = event.pageY;
+
+        target.style.left = px+10 + "px";
+        target.style.top = py+5 + "px";
+        target.style.visibility = "visible";
+    }
+
+    function hidePopup() {
+      target = document.getElementById("popup");
+      target.style.visibility = "hidden";
+    }
+  </script>
+</head>
+<body>
+
+<div>テキストその1</div>
+<div>テキストその2</div>
+<div><a href="javascript:void(0);" onmouseover="showPopup(event);" onmouseout="hidePopup();">
+  テキストその3</a></div>
+<div>テキストその4</div>
+<div>テキストその5</div>
+<div>テキストその6</div>
+<div>テキストその7</div>
+
+<div id="popup"
+  style="position:absolute; z-index:10; visibility:hidden; background-color:#fbff96;">
+  ポップアップです</div>
+
+</body>
+</html>
