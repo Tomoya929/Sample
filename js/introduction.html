@@ -6,80 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自己紹介</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-   
 </head>
+
+<header>
+    <span id="view_clock"></span>
+
+    <script type="text/javascript">
+    timerID = setInterval('clock()',500);
+    function clock() {
+        document.getElementById("view_clock").innerHTML = getNow();
+    }
+    
+    function getNow() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const mon = now.getMonth()+1;
+        const day = now.getDate();
+        const hour = now.getHours();
+        const min = now.getMinutes();
+        const sec = now.getSeconds();
+    
+        const s = "現在の時刻は" + year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒" +　"です。"; 
+        return s;
+    }
+    </script>
+</header>
+
 <body id="body">
     <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
     <script>bubbly();</script>
-    <script type = "text/javascript">
-      function showPopup(event) {
-      target = document.getElementById("popup");
 
-      if (!event) var event = window.event;
-      if (!event.pageX) px = event.clientX + document.body.scrollLeft; else px = event.pageX;
-      if (!event.pageY) py = event.clientY + document.body.scrollTop; else py = event.pageY;
-
-        target.style.left = px+10 + "px";
-        target.style.top = py+5 + "px";
-        target.style.visibility = "visible";
-    }
-    function hidePopup() {
-      target = document.getElementById("popup");
-      target.style.visibility = "hidden";
-     }
-    </script>
     <div id="container">
         <h1><i>-My Profile-</i></h1>
 
     <div class = "txt-box">
-     <div class= "txt-title">    
+    <div class= "txt-title">    
         Base Data</div>
-         <ul>
-             <li>名前　星 智也</li>
-             <li>生年月日　1997/9/29(てんびん座)</li>
-             <li>血液型 B型</li>
-         </ul>
+        <ul>
+            <li>名前　星 智也</li>
+            <li><details>
+                <summary>生年月日</summary>
+                1997/9/29(てんびん座)
+                </details></li>
+            <li><details>
+                <summary>血液型</summary>
+                B型
+                </details></li>
+        </ul>
     </div>
-  
+
     <div class = "txt-box">
         <div class= "txt-title">略歴</div>
-         <ul>
-             <li>2016年3月 埼玉県立所沢高等学校 卒業</li>
-             <li>2021年3月 成城大学社会イノベーション学部 卒業</li>
-         </ul>
+        <ul>
+            <li><details>
+                <summary>2016年3月 埼玉県立所沢高等学校 卒業</summary>
+                高校時代は、ギターアンサンブルの部活に所属していました。
+                </details></li>
+            <li>2021年3月 成城大学社会イノベーション学部 卒業</li>
+        </ul>
     </div>
 
     
     <div class = "txt-box">
         <div class= "txt-title">資格</div>
-         <ul>
-             <li>2017年9月 普通自動車運転免許取得</li>
-         </ul>
+        <ul>
+            <li>2017年9月 普通自動車運転免許取得</li>
+        </ul>
     </div>
 
     <div class = "txt-box">
         <div class= "txt-title">趣味</div>
-         <ul>
-             <li><a href="javascript:void(0);" 
-                onmouseover= showPopup(event);
-                onmouseout= hidePopup();>
-                 アニメ鑑賞</a></li>
-                 <div id = "popup" 
-                 style = position:absolute;z-index:10;visibility:hidden;background-color:lightblue;font-weight:bold;>
-                     最近はウマ娘にハマっています。</div>
-             <li>ライブ鑑賞</li>
-             <li>旅行</li>
-             <div class = "picture">
-            
-        </div>
+        <ul>
+            <li><details>
+                <summary>アニメ鑑賞</summary>
+                最近はウマ娘に興味を持っています。
+            </details></li>
+            <li><details>
+                <summary>散歩</summary>
+                天気が良い時は、5km前後歩くこともあります。
+            </details></li>
+            <li><details>
+                <summary>旅行</summary>
+                情勢が落ち着いたら、自分の知らない街を訪れたいです。    
+            </details></li>
+        </ul>
     </div>
 
-    <div class = "PR">
-        <span class= "PR-title">自己PR</span>
-         <p><u>何事も粘り強く取り組める点が私の強みです。</u></p>
-         <p>IT経験はまだありませんが、積極的に挑戦する気持ちを忘れずに</p>
-         <p>今後の業務に取り組んでいきたいです。</p>
-        </span></div>
-   
+    <div class = "txt-box">
+    <div class= "txt-title">自己PR</div>
+    <p>何事も粘り強く取り組める点が私の強みです。<br>
+    IT経験はまだありませんが、積極的に挑戦する気持ちを忘れずに<br>
+    今後の業務に取り組んでいきたいです。</p>
+    </div>
+    </div>
 </body>
+
+<footer>
+    <p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script> Tomoya Hoshi</p>
+</footer>
 </html>
