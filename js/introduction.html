@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<header>
+    <span id="view_clock"></span>
+
+    <script type="text/javascript">
+    timerID = setInterval('clock()',500);
+    function clock() {
+        document.getElementById("view_clock").innerHTML = getNow();
+    }
+    
+    function getNow() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const mon = now.getMonth()+1;
+        const day = now.getDate();
+        const hour = now.getHours();
+        const min = now.getMinutes();
+        const sec = now.getSeconds();
+    
+        const s = "現在の時刻は" + year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒" +　"です。"; 
+        return s;
+    }
+    </script>
+</header>
+
+<body id="body">
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <script>bubbly();</script>
+
+    <div id="container">
+        <h1><i>-My Profile-</i></h1>
+
+    <div class = "txt-box">
+    <div class= "txt-title">    
+        Base Data</div>
+        <ul>
+            <li>名前　星 智也</li>
+            <li><details>
+                <summary>生年月日</summary>
+                1997/9/29(てんびん座)
+                </details></li>
+            <li><details>
+                <summary>血液型</summary>
+                B型
+                </details></li>
+        </ul>
+    </div>
+
+    <div class = "txt-box">
+        <div class= "txt-title">略歴</div>
+        <ul>
+            <li><details>
+                <summary>2016年3月 埼玉県立所沢高等学校 卒業</summary>
+                高校時代は、ギターアンサンブルの部活に所属していました。
+                </details></li>
+                <li><details>
+                <summary>2021年3月 成城大学社会イノベーション学部 卒業</summary>
+                都市計画を研究するゼミナールに所属していました。<br>
+                また、卒業論文のテーマとして沼津市の地域活性化問題を取り上げました。
+                </details></li>
+        </ul>
+    </div>
+
+    
+        <ul>
+            <li>2017年9月 普通自動車運転免許取得</li>
+        </ul>
+    </div>
+
+    <div class = "txt-box">
+        <div class= "txt-title">趣味</div>
+        <ul>
+            <li><details>
+                <summary>アニメ鑑賞</summary>
+                最近はウマ娘に興味を持っています。
+            </details></li>
+            <li><details>
+                <summary>散歩</summary>
+                天気が良い時は、5km前後歩くこともあります。
+            </details></li>
+            <li><details>
+                <summary>旅行</summary>
+                情勢が落ち着いたら、自分の知らない街を訪れたいです。    
+            </details></li>
+        </ul>
+    </div>
+
+    <div class = "txt-box">
+    <div class= "txt-title">自己PR</div>
+    <p>何事も粘り強く取り組める点が私の強みです。<br>
+    IT経験はまだありませんが、積極的に挑戦する気持ちを忘れずに<br>
+    今後の業務に取り組んでいきたいです。</p>
+    
+    </div>
+    </div>
+</body>
+
+<footer>
+    <p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script> Tomoya Hoshi</p>
+</footer>
+</html>
