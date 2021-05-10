@@ -35,13 +35,15 @@ h1 {
 .accordion__title {
     font-size: 1.2em;
     background: whitesmoke;
-    /* border: 1px solid transparent; */
-    padding: 4px;
+    /* padding: 4px; */
     text-align: center;
     color: #000;
     font-weight: bold;
     letter-spacing: 0.05em;
     cursor: pointer;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    padding: 0.5em;
     user-select: none;
 }
 
@@ -86,6 +88,7 @@ h1 {
     opacity: 0;
     transition-duration: .3s;
     font-weight: bold;
+    background-color: whitesmoke;
 }
 
 .accordion__content.is-open {
