@@ -81,8 +81,8 @@ h1 {
 .accordion__content {
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
-    padding: 0 1.5em;
-    line-height: 20px;
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 30px;
     height: 0;
     overflow: hidden;
     opacity: 0;
@@ -142,35 +142,12 @@ li {
 }
 
 .txt-box p {
-    padding: 15px 20px;
     margin: 0;
     font-weight: bold;
     background-color: whitesmoke;
     padding: 0.5em 0.5em 0.5em 2em;
     border: solid 3px gray;
     line-height: 2;
-}
-
-details {
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding: .5em .5em 0;
-    cursor: pointer;
-}
-
-summary {
-    margin: -.5em -.5em 0;
-    padding: .5em;
-}
-
-details[open] {
-    padding: .5em;
-}
-
-details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: .5em;
-    transition: 0.4s;
 }
 
 footer{
